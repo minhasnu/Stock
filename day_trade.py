@@ -24,9 +24,10 @@ total_df = pd.concat([df1,df2] , axis = 1)
 
 # total_df.plot()
 # plt.show()
-print(data_ti)
+
 i = 1
 while i==1:
     data_ts, meta_data_ts = ts.get_intraday(symbol = stock, interval = interval, outputsize='full')
     data_ts['4. close'].to_csv("output.csv")
-    time.sleep(60)
+    print(data_ts)
+    time.sleep(12)
