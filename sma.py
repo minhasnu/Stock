@@ -4,12 +4,12 @@ from alpha_vantage.techindicators import TechIndicators
 import matplotlib.pyplot as plt 
 
 api_key = 'HQJMSKJUDBOQB04I'
-interval = '15min'
+interval = '1min'
 ts = TimeSeries(key=api_key, output_format = 'pandas')
 data_ts, meta_data_ts = ts.get_intraday(symbol = 'MSFT', interval = interval, outputsize='full')
 
 
-period = 100
+period = 60
 ti = TechIndicators(key=api_key, output_format = 'pandas')
 data_ti, meta_data_ti = ti.get_sma(symbol = 'MSFT', interval = interval, time_period = period, series_type='close')
 
