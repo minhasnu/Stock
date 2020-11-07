@@ -10,7 +10,7 @@ ts = TimeSeries(key=api_key, output_format = 'pandas')
 data_ts, meta_data_ts = ts.get_intraday(symbol = stock, interval = interval, outputsize='full')
 
 
-period = 100
+period = 20
 ti = TechIndicators(key=api_key, output_format = 'pandas')
 data_ti, meta_data_ti = ti.get_sma(symbol = stock, interval = interval, time_period = period, series_type='close')
 

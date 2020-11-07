@@ -29,7 +29,6 @@
    
 import pandas as pd
 import time
-import psutil
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import style
